@@ -135,7 +135,7 @@ MolPad.prototype.setupEventHandling = function()
 
 MolPad.prototype.onScroll = function(delta, e)
 {
-	var s = 1 + this.s.zoomSpeed * delta;
+	var s = 1 + this.s.zoomSpeed * delta * -1;
 	if(this.matrix[0] * s < this.s.minZoom) s = this.s.minZoom / this.matrix[0];
 	var p = new MPPoint().fromPointer(e);
 	p.x -= this.offset.left;

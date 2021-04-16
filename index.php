@@ -6,7 +6,8 @@ include_once("php/Mobile_Detect.php");
 error_reporting(0);
 
 $detect = new Mobile_Detect;
-$touch = $detect -> isMobile() || $detect -> isTablet();
+$touch = 'true';
+//$touch = $detect -> isMobile() || $detect -> isTablet();
 
 if(is_below_IE10())
 {
@@ -108,8 +109,12 @@ Query parameters:
 		?>
 
 		<!-- CSS -->
+    <!-- link rel="stylesheet" href="/fonts/fontawesome/css/all.min.css?v5.14" type="text/css" /-->
 		<link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.css" />
-		<link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700" />
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+		<!--link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700" /-->
+
 		<link type="text/css" rel="stylesheet" href="build/molview-app.min.css" />
 		<?php
 			if($touch)
@@ -145,15 +150,6 @@ Query parameters:
 			}
 		</script>
 
-		<!-- Google Analytics -->
-		<script>
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-			ga('create', 'UA-49088779-3', 'molview.org');
-			ga('send', 'pageview');
-		</script>
 	</head>
 	<body <?php if(isset($menu)) if($menu == "off") echo 'class="no-menu"'; ?>>
 		<svg width="0" height="0">
