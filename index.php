@@ -6,7 +6,8 @@ include_once("php/Mobile_Detect.php");
 error_reporting(0);
 
 $detect = new Mobile_Detect;
-$touch = $detect -> isMobile() || $detect -> isTablet();
+$touch = 'true';
+//$touch = $detect -> isMobile() || $detect -> isTablet();
 
 if(is_below_IE10())
 {
