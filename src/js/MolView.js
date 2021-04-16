@@ -77,6 +77,8 @@ var MolView = {
 	 */
 	init: function()
 	{
+
+    /*
 		//exeption tracking
 		window.onerror = function(message, url, row, column)
 		{
@@ -93,6 +95,7 @@ var MolView = {
 				"exFatal": false
 			});
 		});
+    */
 
 		//setup
 		MolView.devicePixelRatio = window.devicePixelRatio || (MolView.mobile ? 1.5 : 1.0);
@@ -401,10 +404,12 @@ var MolView = {
 	/**
 	 * Wrapper for analytics.js
 	 */
+  /*
 	pushEvent: function(category, action, label, number)
 	{
 		ga("send", "event", category, action, label, number);
 	},
+  */
 
 	/**
 	 * Executes URL query
